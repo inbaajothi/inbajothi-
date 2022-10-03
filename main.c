@@ -3,15 +3,14 @@
 
 int main()
 {
-    int age=20;
-    char c='a';
-    char cc=100;
-    double d=99.245;
-    char str[3] = "New College.";
-    printf("%s",str);
-    const double PI = 3.14;
-   printf("size of long double= %d bytes\n", sizeof(d));
-   return 0;
+    char chr;
+    printf("Enter a character:");
+    scanf("%c", &chr);
 
 
+    printf("You entered %c.\n",chr);
+
+
+    printf("ASCII value is %d.", chr);
+    return 0;
 }
