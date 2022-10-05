@@ -3,17 +3,43 @@
 
 int main()
 {
-    int rows,i,j,number = 1;
-    printf("Enter the number of  rows:");
-    scanf("%d", &rows);
-    for(i = 1; i <= rows; i++) {
-            for(i = 1; j <= i; ++j) {
-                printf("%d", number);
-                ++number;
-            }
-            printf("\n");
+    int n,c,k,space = 1;
+
+
+    printf("Enter number of rows\n");
+    scanf("%d", &n);
+
+    space = n - 1;
+
+    for(k = 1; k <= n; k++)
+    {
+        for(c = 1; c <= space; c++)
+            printf(" ");
+
+        space--;
+
+        for(c = 1; c <=2*k-1; c++)
+            printf("*");
+        printf("\n");
     }
-    return 0;
+
+    space = 1;
+
+    for(k = 1; k <=n-1; k++)
+    {
+        for(c = 1; c <= space; c++)
+            printf(" ");
+
+        space++;
+
+        for(c = 1; c <=2*(n - k)-1; c++)
+            printf("*");
+
+        printf("\n");
+    }
+
+    getch();
+
 
 
 }
